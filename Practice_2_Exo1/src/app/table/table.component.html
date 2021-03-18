@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Username</th>
+    <th scope="col">Email</th>
+  </tr>
+  </thead>
+  <tbody>
+  <ng-container *ngFor="let user of users; let i = index">
+    <tr app-table-line
+        [id]="user.id"
+        [username]="changeUsernameIfNeeded(i)"
+        [email]="user.email"
+        [ngStyle]="{color: colorBasedOnIndex(i)}"
+    >
+  </ng-container>
+  </tbody>
+  <!--        [username]="changeUsernameIfNeeded(user.username)"-->
+
+</table>
