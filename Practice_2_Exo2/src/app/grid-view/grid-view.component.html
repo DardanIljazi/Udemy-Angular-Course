@@ -1,0 +1,11 @@
+<ng-container *ngFor="let row of numSequence(rows)">
+  <div class="container">
+    <div class="row">
+      <ng-container *ngFor="let col of numSequence(cols)">
+        <div class="col" app-card>
+
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>
