@@ -6,9 +6,9 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./table-line.component.css']
 })
 export class TableLineComponent implements OnInit {
-  @Input() id: string | undefined
-  @Input() username: string | undefined
-  @Input() mail: string | undefined
+  @Input() id?: string
+  @Input() username?: string
+  @Input() mail?: string
   constructor() { }
 
   ngOnInit(): void {

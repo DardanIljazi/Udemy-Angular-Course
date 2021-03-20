@@ -20,7 +20,11 @@
   </tr>
   </thead>
   <tbody>
-    <tr app-table-line id="1" username="Dardanboy" mail="dardanboy@gmail.com"></tr>
-    <tr app-table-line id="2" username="Jean-Pierre" mail="jean-pierre@gmail.com"></tr>
+    <tr app-table-line
+        *ngFor="let user of users"
+        [id]="user.id"
+        [username]="user.username"
+        [mail]="user.mail"
+    ></tr>
   </tbody>
 </table>
