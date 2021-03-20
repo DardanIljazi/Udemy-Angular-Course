@@ -1,0 +1,17 @@
+<th scope="row">{{ id }}</th>
+<th scope="row">{{ name }}</th>
+<th scope="row">{{ state }}</th>
+<th scope="row">
+  <button type="button"
+          class="btn btn-dark"
+          (click)="switchToState(id, 'In stock')"
+          *ngIf="state === 'Not in stock'">
+    Pass it to "In stock"
+  </button>
+  <button type="button"
+          class="btn btn-dark"
+          (click)="switchToState(id, 'Not in stock')"
+          *ngIf="state === 'In stock'">
+    Pass it to "Not in stock"
+  </button>
+</th>

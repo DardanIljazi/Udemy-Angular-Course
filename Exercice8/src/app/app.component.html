@@ -1,0 +1,15 @@
+<h1 class="text-center">Product manager</h1>
+<hr>
+<button type="button"
+        class="btn btn-dark"
+        (click)="passAllProductsToState('In stock')"
+        >
+  All products to "In Stock"
+</button>
+<button type="button"
+        class="btn btn-dark"
+        (click)="passAllProductsToState('Not in stock')"
+        >
+  All products to "Not in Stock"
+</button>
+<app-table [products]="products"></app-table>
