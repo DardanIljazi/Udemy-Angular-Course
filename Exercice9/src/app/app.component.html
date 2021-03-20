@@ -1,0 +1,15 @@
+<h1>Car manager</h1>
+<hr>
+<button type="button"
+        class="btn btn-dark"
+        (click)="switchAllToState('Not rentable')"
+>
+Rent all cars
+</button>
+<button type="button"
+        class="btn btn-dark"
+        (click)="switchAllToState('Rentable')"
+>
+  Free all cars
+</button>
+<app-grid [cols]="3"></app-grid>

@@ -1,0 +1,17 @@
+<div class="card">
+  <img src="{{picture}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{brand}}</h5>
+    <p class="card-text">{{model}}</p>
+    <div class="flex justify-content-center align-content-center">
+      <a  class="btn btn-primary d-block"
+         *ngIf="state === 'Rentable'"
+         (click)="switchStateTo(id, 'Not rentable')"
+      >Rent it</a>
+      <a class="btn btn-primary d-block"
+         *ngIf="state === 'Not rentable'"
+         (click)="switchStateTo(id, 'Rentable')"
+      >Free it</a>
+    </div>
+  </div>
+</div>

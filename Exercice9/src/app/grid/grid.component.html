@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row" *ngFor="let rowNumber of getNumberOfRowsToShowForCarsAndColsNumber(cols); let rowIndex = index">
+    <div class="col" *ngFor="let car of getCarsForRow(rowIndex);"
+         app-card [id]="car.id"
+         [picture]="car.picture"
+         [brand]="car.brand"
+         [model]="car.model"
+         [state]="car.state">
+    </div>
+  </div>
+</div>
