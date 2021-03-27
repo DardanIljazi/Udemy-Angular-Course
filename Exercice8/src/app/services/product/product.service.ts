@@ -26,7 +26,10 @@ export class ProductService {
   }
 
   switchProductToState(id: number, newState: string): void {
-    this.products.find(product => product.id === id).state = newState
+    this.findElementById(id).state = newState
   }
 
+  findElementById(id: number): any {
+    return this.products.find(product => product.id === id)
+  }
 }

@@ -14,4 +14,11 @@
           *ngIf="state === 'In stock'">
     Pass it to "Not in stock"
   </button>
+  <a
+    class="btn btn-primary"
+    *ngIf="state === 'In stock'"
+    [routerLink]="['/products', id]"
+  >
+    Details
+  </a>
 </th>

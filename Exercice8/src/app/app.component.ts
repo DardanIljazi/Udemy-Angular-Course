@@ -7,13 +7,5 @@ import {ProductService} from './services/product/product.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  products: Array<any>;
 
-  constructor(private productService: ProductService) {
-    this.products = productService.products
-  }
-
-  passAllProductsToState(newState: string): void {
-    this.productService.switchAllToState(newState)
-  }
 }
