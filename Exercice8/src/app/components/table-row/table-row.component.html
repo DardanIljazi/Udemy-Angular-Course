@@ -16,9 +16,14 @@
   </button>
   <a
     class="btn btn-primary"
-    *ngIf="state === 'In stock'"
     [routerLink]="['/products', id]"
   >
     Details
+  </a>
+  <a
+    class="btn btn-warning"
+    [routerLink]="['/products', id, 'edit']"
+  >
+    Edit
   </a>
 </th>

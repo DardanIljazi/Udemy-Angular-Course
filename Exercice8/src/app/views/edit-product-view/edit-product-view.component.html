@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div class="container text-center">
+  <form (ngSubmit)="onSubmitEditProduct()" #editProduct="ngForm">
+    <div class="form-group">
+      <label for="name">
+        Product name
+      </label>
+
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="form-control"
+        [(ngModel)]="product.name"
+        required
+        maxlength="30"
+        #name="ngModel"
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="state" class="form-label">
+        State
+      </label>
+
+      <select
+        id="state"
+        name="state"
+        [(ngModel)]="product.state"
+        required
+        class="form-control"
+        #state="ngModel"
+
+      >
+        <option value="Not in stock">Not in stock</option>
+        <option value="In stock">In stock</option>
+      </select>
+    </div>
+
+    <button
+      class="btn btn-primary float-right text-uppercase"
+      [disabled]="editProduct.invalid"
+    >
+      Edit
+    </button>
+
+  </form>
+
+</div>

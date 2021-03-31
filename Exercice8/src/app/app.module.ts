@@ -11,6 +11,9 @@ import { ErrorViewComponent } from './views/error-view/error-view.component';
 import { ProductsViewComponent } from './views/products-view/products-view.component';
 import { HeaderComponent } from './components/header/header.component';
 import {ProductViewComponent} from './views/product-view/product-view.component';
+import { CreateProductViewComponent } from './views/create-product-view/create-product-view.component';
+import {FormsModule} from '@angular/forms';
+import { EditProductViewComponent } from './views/edit-product-view/edit-product-view.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +24,14 @@ import {ProductViewComponent} from './views/product-view/product-view.component'
     ErrorViewComponent,
     ProductsViewComponent,
     HeaderComponent,
-    ProductViewComponent
+    ProductViewComponent,
+    CreateProductViewComponent,
+    EditProductViewComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
